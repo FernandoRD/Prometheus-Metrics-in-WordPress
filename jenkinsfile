@@ -1,9 +1,5 @@
 pipeline{
-    agent{
-        docker{
-            image 'composer'
-        }
-    }
+    agent { label 'docker_executor' }
 
     stages{
         stage('Checkout Source'){
