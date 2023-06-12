@@ -1,0 +1,22 @@
+pipeline{
+    agent{
+        docker{
+            image 'composer'
+        }
+    }
+
+    stages{
+        stage('Checkout Source'){
+            steps{
+                git url:'https://github.com/FernandoRD/Prometheus-Metrics-in-WordPress.git', branch:'main'
+            }        
+        }        
+        stage('Test'){
+            steps{
+                sh compose update -o
+                sh pwd
+                sh ls
+            }
+        }
+    }
+}
