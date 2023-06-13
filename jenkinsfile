@@ -9,7 +9,7 @@ pipeline{
         }        
         stage('Build'){
             steps{
-                sh('docker run --rm --interactive --tty --volume $PWD:/app composer compose update -o')
+                sh('docker run --rm --interactive --volume $PWD:/app composer compose update -o')
                 sh('pwd')
                 sh('ls')
             }
