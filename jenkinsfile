@@ -2,11 +2,11 @@ pipeline{
     agent { label 'docker_executor' }
 
     stages{
-        //stage('Checkout Source'){
-            //steps{
-                //git url:'https://github.com/FernandoRD/Prometheus-Metrics-in-WordPress.git', branch:'main'
-            //}        
-        //}        
+        stage('Checkout Source'){
+            steps{
+                git url:'https://github.com/FernandoRD/Prometheus-Metrics-in-WordPress.git', branch:'master'
+            }        
+        }        
         stage('Test'){
             steps{
 
