@@ -7,7 +7,7 @@ pipeline{
                 git url:'https://github.com/FernandoRD/Prometheus-Metrics-in-WordPress.git', branch:'master'
             }        
         }        
-        stage('Test'){
+        stage('Build'){
             steps{
                 sh('docker run --rm --interactive --tty --volume $PWD:/app composer compose update -o')
                 sh('pwd')
