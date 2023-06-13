@@ -10,7 +10,7 @@ pipeline{
         stage('Test'){
             steps{
 
-                sh('compose update -o')
+                //sh('compose update -o')
                 sh('pwd')
                 sh('ls')
             }
